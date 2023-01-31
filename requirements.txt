@@ -38,10 +38,8 @@ Jinja2==3.1.2
 jmespath==1.0.1
 json5==0.9.6
 jsonschema==4.17.3
-jupyter==1.0.0
 jupyter-client==6.1.12
 jupyter-console==6.4.0
-jupyter-server==1.23.5
 jupyter_core==5.2.0
 jupyterlab==3.5.3
 jupyterlab-pygments==0.1.2
@@ -52,7 +50,6 @@ matplotlib-inline==0.1.2
 mistune==0.8.4
 nbclassic==0.3.1
 nbclient==0.5.3
-nbconvert==6.1.0
 nest-asyncio==1.5.1
 notebook==6.4.12
 notebook_shim==0.2.2
