@@ -144,6 +144,7 @@ def searchbar(request):
         search = request.GET["search"],
         print(search)
         searchList = search[0].split()
+        
         # deity = Deity.objects.filter(Q(name__icontains=search[0])|Q(location__icontains=search[0])|Q(alt_name__icontains=search[0])|Q(culture__icontains=search[0])|Q(religion__icontains=search[0])|Q(description__icontains=search[0])|Q(pop_culture__icontains=search[0])),
 
         # searchStr = convertTuple(search)
@@ -152,6 +153,7 @@ def searchbar(request):
         # print(searchStr)
 
         # search = re.findall(search, txt)
+        
         results = []
         for searchWord in searchList:
             searchRes = Deity.objects.annotate(search=SearchVector('name', 'location', 'alt_name', 'culture', 'religion', 'description', 'pop_culture'),).filter(search=SearchQuery(searchWord, search_type='phrase'))
