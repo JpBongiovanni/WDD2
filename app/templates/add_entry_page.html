@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-        <div class="container p-3 my-3 border" style= "background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4WoLFtS43tsSqqrldoUNmiPkABqBBvDFc-w&usqp=CAU)">
+        <div class="container p-3 my-3 border border-0">
                 <h1>Contribute to the Database</h1>
                 <form class="jumbotron bg-transparent" action="add_deity" method="POST">
                     {% csrf_token %}
