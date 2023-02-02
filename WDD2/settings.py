@@ -79,15 +79,16 @@ WSGI_APPLICATION = 'WDD2.wsgi.application'
 # }
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    #     'NAME': 'WDD',
-    #     'USER': 'postgres',
-    #     'PASSWORD': config('DBPW') or os.getenv('DBPW'),
-    #     'HOST': 'localhost',
-    #     'PORT': '5432',
-    # },
-    'default': dj_database_url.config(default=DATABASE_URL, conn_max_age=1000),
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'railway' or 'WDD',
+        'USER': 'postgres',
+        'PASSWORD': config('railwayPW') or config('DBPW') or os.getenv('DBPW'),
+        'HOST': 'localhost' or 'containers-us-west-91.railway.app',
+        'PORT': '5670' or '5432',
+    },
+    
+    # 'default': dj_database_url.config(default=DATABASE_URL, conn_max_age=1000),
     
 }
 
