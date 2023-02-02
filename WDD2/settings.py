@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'WDD2.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'railway' or 'WDD',
         'USER': 'postgres',
         'PASSWORD': config('railwayPW') or config('DBPW') or os.getenv('DBPW'),
