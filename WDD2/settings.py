@@ -84,7 +84,7 @@ DATABASES = {
         'NAME': 'railway' or 'WDD',
         'USER': 'postgres',
         'PASSWORD': config('railwayPW') or config('DBPW') or os.getenv('DBPW'),
-        'HOST': 'containers-us-west-91.railway.app',
+        'HOST': 'containers-us-west-91.railway.app' or 'localhost',
         'PORT': '5670' or '5432',
     },
     
