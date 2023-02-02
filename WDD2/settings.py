@@ -85,7 +85,7 @@ DATABASES = {
         'USER': 'postgres',
         'PASSWORD': config('railwayPW') or config('DBPW') or os.getenv('DBPW'),
         'HOST': 'containers-us-west-91.railway.app',
-        'PORT': '5670' or '5432',
+        'PORT': config('PGPORT') or '5432',
     },
     
     # 'default': dj_database_url.config(default=DATABASE_URL, conn_max_age=1000),
